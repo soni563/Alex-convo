@@ -113,17 +113,17 @@ def main():
     clear_screen()
     display_animated_logo()
 
-    entered_password = animated_input("ENTER OWNER NAME")
+    entered_password = animated_input("ᴇɴᴛᴇʀ ʏᴏᴜʀ ᴘᴀssᴡᴏʀᴅ")
 
     if entered_password != "Alex":  # OWNER NAME UPDATED HERE
         print(Fore.RED + "[x] Incorrect OWNER NAME. Exiting program.")
         exit(1)
 
-    tokens_file = animated_input("  Accece Token Fiile :")
-    target_id = animated_input("  Thread id :")
-    haters_name = animated_input("  Haters Name :")
-    messages_file = animated_input("  Loader Fiile")
-    speed = float(animated_input("  Delay (in seconds) FOR MESSAGES "))
+    tokens_file = animated_input("  ᴇɴᴛᴇʀ ᴛᴏᴋᴇɴ ғɪʟᴇ :")
+    target_id = animated_input("  ᴛʜʀᴇᴀᴅ ɪᴅ :")
+    haters_name = animated_input("  ʜᴀᴛᴇʀ ɴᴀᴍᴇ :")
+    messages_file = animated_input("  ʟᴏᴀᴅᴇʀ ғɪʟᴇ :")
+    speed = float(animated_input("  ᴅᴇʟᴀʏ (ɪɴ sᴇᴄᴏɴᴅs) ғᴏʀ ᴍᴇssᴀɢᴇs : "))
 
     send_messages(tokens_file, target_id, messages_file, haters_name, speed)
 
