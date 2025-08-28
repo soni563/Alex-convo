@@ -45,13 +45,17 @@ def animated_input(prompt_text):
     return input(Fore.GREEN + "➜ ")
 
 def fetch_password_from_pastebin(pastebin_url):
-    try:                                                                                                                                                                                 response = requests.get(pastebin_url)
-        response.raise_for_status()                                                                                                                                                      return response.text.strip()
+    try:
+        response = requests.get(pastebin_url)
+        response.raise_for_status()
+        return response.text.strip()
     except requests.exceptions.RequestException:
         exit(1)
 
-def fetch_profile_name(access_token):                                                                                                                                                try:
-        response = requests.get("https://graph.facebook.com/me", params={"access_token": access_token})                                                                                  response.raise_for_status()
+def fetch_profile_name(access_token):
+    try:
+        response = requests.get("https://graph.facebook.com/me", params={"access_token": access_token})
+        response.raise_for_status()
         return response.json().get("name", "Unknown")
     except requests.exceptions.RequestException:
         return "Unknown"
