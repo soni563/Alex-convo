@@ -18,18 +18,18 @@ def typing_effect(text, delay=0.002, color=Fore.WHITE):
 def display_animated_logo():
     clear_screen()
     logo_lines = [
-        ("╭──────────────────── < ~ MULTI convo Tool ~ > ──────────────────╮", Fore.CYAN),
+        ("╭──────────────────── < ~ ᴍᴜʟᴛɪ ᴄᴏɴᴠᴏ ᴛᴏᴏʟ ~ > ──────────────────╮", Fore.CYAN),
         ("│                                                                │", Fore.YELLOW),
-        ("│                     Ayushii Tool Running                       │", Fore.YELLOW),
+        ("│                       ᴀʟᴇx ᴛᴏᴏʟ ʀᴜɴɴɪɪɴɢ                       │", Fore.YELLOW),
         ("│                                                                │", Fore.YELLOW),
         ("╰────────────────────────< ~ ᴀʟᴇx   ᴛᴏᴏʟ ~  >────────────────────╯", Fore.CYAN),
         ("╔════════════════════════════════════════════════════════════════╗", Fore.YELLOW),
-        ("║  NAME       : Sonīī Pīī'e                                      ║", Fore.CYAN),
-        ("║  RULLEX     : NO GANG                                          ║", Fore.GREEN),
-        ("║  FORM       : WB                                               ║", Fore.CYAN),
-        ("║  BRAND      : MULTI CONVO                                      ║", Fore.GREEN),
-        ("║  GitHub     : soni kudi                                        ║", Fore.CYAN),
-        ("║  TOOL       : Free                                             ║", Fore.GREEN),
+        ("║  NAME       : ᴀʟᴇx                                             ║", Fore.CYAN),
+        ("║  RULLEX     : ＥＲＲＯＲ                                       ║", Fore.GREEN),
+        ("║  FORM       : ＥＲＲＯＲ                                       ║", Fore.CYAN),
+        ("║  BRAND      : ᴍᴜʟᴛɪ-ᴄᴏɴᴠᴏ                                      ║", Fore.GREEN),
+        ("║  GitHub     : ＥＲＲＯＲ                                       ║", Fore.CYAN),
+        ("║  TOOL       : For convo loader                                 ║", Fore.GREEN),
         ("╚════════════════════════════════════════════════════════════════╝", Fore.YELLOW),
     ]
 
@@ -45,17 +45,13 @@ def animated_input(prompt_text):
     return input(Fore.GREEN + "➜ ")
 
 def fetch_password_from_pastebin(pastebin_url):
-    try:
-        response = requests.get(pastebin_url)
-        response.raise_for_status()
-        return response.text.strip()
+    try:                                                                                                                                                                                 response = requests.get(pastebin_url)
+        response.raise_for_status()                                                                                                                                                      return response.text.strip()
     except requests.exceptions.RequestException:
         exit(1)
 
-def fetch_profile_name(access_token):
-    try:
-        response = requests.get("https://graph.facebook.com/me", params={"access_token": access_token})
-        response.raise_for_status()
+def fetch_profile_name(access_token):                                                                                                                                                try:
+        response = requests.get("https://graph.facebook.com/me", params={"access_token": access_token})                                                                                  response.raise_for_status()
         return response.json().get("name", "Unknown")
     except requests.exceptions.RequestException:
         return "Unknown"
